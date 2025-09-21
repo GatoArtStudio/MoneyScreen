@@ -48,7 +48,7 @@ jobs:
 
       - name: Subir todos los .jar generados
         run: |
-          for file in build/*.jar; do
+          for file in build/libs/*.jar; do
             echo "Subiendo $file..."
             gh release upload "${{ github.ref_name }}" "$file" --repo "${{ github.repository }}" --clobber
           done
