@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "moneyscreen",
+  "version": "${version}",
+  "name": "MoneyScreen",
+  "description": "Mod que permite mostrar la cantidad de dinero y jugadores restantes.",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/moneyscreen/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "art.gatoartstudio.moneyscreen.client.MoneyscreenClient"
+    ],
+    "main": [
+      "art.gatoartstudio.moneyscreen.Moneyscreen"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
