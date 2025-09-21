@@ -13,6 +13,7 @@ import net.minecraft.text.Text;
 public class ShowViewCommand {
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
         dispatcher.register(CommandManager.literal("moneyscreen")
+                .requires(serverCommandSource -> serverCommandSource.hasPermissionLevel(2))
                 .then(CommandManager.argument("money", IntegerArgumentType.integer())
                         .then(CommandManager.argument("players", IntegerArgumentType.integer())
                                 .executes(context -> {
